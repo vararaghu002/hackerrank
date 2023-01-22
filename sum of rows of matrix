@@ -1,0 +1,36 @@
+//https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-matrix-column-sum/problem
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int r,c,sum;
+        Scanner s=new Scanner(System.in);           //00 01 02 sum of coloum at i=0 j value is increasing
+         r=s.nextInt();                             //10 11 12
+         c=s.nextInt();                              //sum of coloumn at j=0 i value increasing so we use i loop inside j 
+        int a[][]=new int[r][c];                      //loop
+         for(int i=0;i<r;i++)
+         {
+              for(int j=0;j<c;j++)
+              {
+                  a[i][j]=s.nextInt();
+              }
+         }
+         for(int j=0;j<c;j++)
+         { sum=0;
+              for(int i=0;i<r;i++)
+              {
+                  sum=sum+a[i][j];
+                  
+              }
+          System.out.println(sum);
+          
+         }
+       
+        
+    }
+}
